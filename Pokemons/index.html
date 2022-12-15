@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémons CRUD</title>
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/481px-Pokebola-pokeball-png-0.png"
+        type="image/x-icon" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+</head>
+
+<body class="bg-dark text-light d-flex flex-column" style="min-height: 100vh;">
+    <header class="fixed-top bg-dark shadow py-2">
+        <div class="container">
+            <h1 class="fs-2 text-center m-0">Pokémons CRUD</h1>
+        </div>
+    </header>
+    <main class="overflow-hidden">
+        <section class="pt-5">
+            <div class="container">
+                <h2 class="fs-3 text-info text-center">Admin</h2>
+                <div class="row g-4">
+                    <section class="col-md-8">
+                        <div class="table-responsive">
+                            <table
+                                class="table table-sm table-dark table-striped table-hover table-bordered align-middle shadow text-center">
+                                <caption>Listado de Pokémons</caption>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre</th>
+                                        <th>Tipo</th>
+                                        <th>Hp</th>
+                                        <th>Ataque</th>
+                                        <th>Especial</th>
+                                        <th>Imagen</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tBodyPokemons"></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="8" class="text-center fs-6">Hecho por pikachu</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="col-md-4">
+                        <form class="d-flex flex-column gap-3" id="formPokemon">
+                            
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-transparent text-light" id="name"
+                                    placeholder="Nombre" required />
+                                <label for="name">Nombre</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-transparent text-light" id="type"
+                                    placeholder="Tipo" required />
+                                <label for="name">Tipo</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-transparent text-light" id="hp"
+                                    placeholder="Hp" required />
+                                <label for="name">HP</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-transparent text-light" id="attack"
+                                    placeholder="Ataque" required />
+                                <label for="name">Ataque</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-transparent text-light" id="special"
+                                    placeholder="Especial" required />
+                                <label for="name">Especial</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-transparent text-light" id="imgurl"
+                                    placeholder="Url de la Imagen" required />
+                                <label for="name">Url de Imagen</label>
+                            </div>
+                            <button class="btn btn-outline-light btn-lg w-100">Enviar</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-dark shadow py-2 mt-auto">
+        <h6 class="text-center m-0">Desarrollado por Agustin Narvaez</h6>
+    </footer>
+    <script src="./js/index.js" type="module" defer></script>
+</body>
+
+</html>
