@@ -5,7 +5,6 @@ const POKEMONS_CRUD_DATA = 'Pokemons';
 const pokemons = JSON.parse(localStorage.getItem(POKEMONS_CRUD_DATA)) ?? [];
 
 const createPokemon = () => {
-    e.preventDefault();
     const documentFormPokemon = document.forms['formPokemon'];
     const name = documentFormPokemon.name.value;
     const type = documentFormPokemon.type.value;
